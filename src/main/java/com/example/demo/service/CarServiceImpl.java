@@ -19,7 +19,7 @@ public class CarServiceImpl {
         List<Car> cars = new ArrayList<>();
         cars.add(carFactory.createSportCar());
         cars.add(carFactory.createMiniCar());
-        cars.add(carFactory.createCar());
+        cars.add(carFactory.createCar("Ferrari"));
         return cars;
     }
 }

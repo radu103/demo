@@ -5,7 +5,7 @@ import com.example.demo.model.MiniCar;
 import com.example.demo.model.SportCar;
 
 public interface CarFactory extends VehicleFactory {
-    Car createCar();
+    Car createCar(String name);
     SportCar createSportCar();
     MiniCar createMiniCar();
 }

@@ -7,10 +7,13 @@ import com.example.demo.model.MiniCar;
 import com.example.demo.model.SportCar;
 
 @Component("carFactory")
-public class CarFactoryImpl implements CarFactory {
+public class CarFactoryImpl extends VehicleFactoryImpl implements CarFactory {
+    
     @Override
-    public Car createCar() {
-        return new Car();
+    public Car createCar(String name) {
+        Car car = (Car)this.createVehicle(name);
+        car.setNumberOfSeats(4);
+        return car;
     }
 
     @Override
